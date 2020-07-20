@@ -1,0 +1,85 @@
+
+
+<div class="container">
+  <div class="row">
+
+
+
+    <!--      <form (ngSubmit)="onAddItem(f)" #f="ngForm">-->
+    <div class="row">
+
+      <div class="col-sm-5 form-group">
+        <label for="name">Name</label>
+        <input
+          placeholder="Search Package"
+          type="text"
+          id="name"
+          name="name"
+          [(ngModel)]="name"
+
+
+          class="form-control"
+        >
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-sm-3 form-group">
+        <label for="days">Days</label>
+        <input
+          type="number"
+          id="days"
+          name="days"
+          [(ngModel)]="days"
+
+
+          class="form-control"
+        >
+      </div>
+      <div class="col-sm-3 form-group">
+        <label for="minPrice">Min Price</label>
+        <input
+          type="number"
+          id="minPrice"
+          name="minPrice"
+          [(ngModel)]="minPrice"
+
+
+          class="form-control"
+        >
+      </div>
+
+      <div class="col-sm-3 form-group">
+        <label for="minPrice">Max Price</label>
+        <input
+          type="number"
+          id="maxPrice"
+          name="maxPrice"
+          [(ngModel)]="maxPrice"
+
+
+          class="form-control"
+        >
+      </div>
+      <!--        <button class="btn btn-success pull-right" style="margin-top: 30px;" type="search" >Search</button>-->
+    </div>
+    <!--      </form>-->
+
+    <hr>
+
+
+
+    <div class="col-md-12">
+      <div class="row">
+        <div *ngFor="let ag of agent">
+          <app-package-item
+            *ngFor="let pack of ag.packages  | filter: name |days: days: minPrice: maxPrice"
+            [package]="pack"
+            [agent]="ag"
+          ></app-package-item>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

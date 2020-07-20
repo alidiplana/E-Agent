@@ -1,0 +1,42 @@
+<!--<div class="col-xs-1 col-md-3 col-lg-3 col-sm-2 pull-left" align="center">-->
+<!--<a-->
+<!--  [routerLink]="['/packages',index, 'detail']"-->
+<!--  (click)="onSelect()"-->
+<!--  style="cursor: pointer"-->
+<!--  class="list-group-item" >-->
+<!--  <div class="card" style="width: 18rem;">-->
+<!--    <img class="card-img-top" style="max-height: 130px;" align="center" src="{{package.image}}" alt="Card image cap">-->
+<!--    <div class="card-body">-->
+<!--      <h4 class="card-title"><b>{{package.name}}</b></h4>-->
+<!--      <hr>-->
+<!--      <p class="card-text">{{package.description}}</p>-->
+<!--    </div>-->
+<!--    <ul class="list-group list-group-flush">-->
+<!--      <li class="list-group-item">{{package.price}}</li>-->
+<!--      <li class="list-group-item">From: {{package.startDate}}</li>-->
+<!--      <li class="list-group-item">To: {{package.endDate}}</li>-->
+<!--    </ul>-->
+<!--    <div class="card-body">-->
+<!--      <a href="#" class="card-link" [routerLink]="['/agents', agent.id]">{{agent.name}}</a>-->
+<!--      <a href="#" class="card-link"></a>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</a>-->
+<!--  <br><br>-->
+<!--</div>-->
+
+<div class="col-lg-4 col-md-4 col-sm-6">
+  <a [routerLink]="['/packages', package.id]" class="fh5co-card-item image-popup">
+    <figure>
+      <div class="overlay"><i class="ti-plus"></i></div>
+      <img src="{{package.image}}" alt="Image" class="img-responsive">
+    </figure>
+    <div class="fh5co-text">
+      <h2>{{package.name}}</h2>
+      <p>{{package.description}}</p>
+      <p>{{package.price}}</p>
+      <p>Days: {{package.days}}</p>
+      <p><span class="btn btn-primary">View Package</span></p>
+    </div>
+  </a>
+</div>

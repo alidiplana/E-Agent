@@ -1,0 +1,112 @@
+<h2>SignUp</h2>
+<div class="row">
+  <div class="col-xs-12">
+    <form (ngSubmit)="onAddItem(f)" #f="ngForm">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            ngModel
+            required
+            class="form-control"
+          >
+        </div>
+
+        <div class="col-sm-6 form-group">
+          <label for="name">Email</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            ngModel
+            required
+            email
+            class="form-control"
+          >
+        </div>
+
+        <div class="col-sm-6 form-group">
+          <label for="image">Image</label>
+          <input
+            type="text"
+            id="image"
+            name="image"
+            ngModel
+            class="form-control"
+          >
+        </div>
+
+        <div class="col-sm-6 form-group" >
+          <label for="name">address</label>
+          <input
+            type="text"
+            id="address"
+            name="address"
+            ngModel
+            class="form-control"
+          >
+        </div>
+
+        <div class="col-sm-6 form-group">
+          <label for="name">Registration No</label>
+          <input
+            type="text"
+            id="registrationNo"
+            name="registrationNo"
+            ngModel
+            class="form-control"
+          >
+        </div>
+
+        <div class="col-sm-6 form-group">
+          <label for="name">Cell No</label>
+          <input
+            type="text"
+            id="cellNo"
+            name="cellNo"
+            ngModel
+            class="form-control"
+          >
+        </div>
+
+        <div class="form-group" class="col-xs-6">
+          <label for="status">Agent Status</label>
+          <select
+            id="status"
+            class="form-control"
+            name="status"
+            ngModel
+          >
+            <option value="away">Away</option>
+            <option value="available">Available</option>
+          </select>
+        </div>
+
+        <br>
+
+        <div class="col-sm-8 form-group pull-left">
+          <label for="name">Introduction</label>
+          <textarea
+            type="text"
+            id="introduction"
+            name="introduction"
+            ngModel
+            class="form-control"
+            rows="5"
+          ></textarea>
+        </div>
+
+
+
+
+
+
+      </div>
+      <button class="btn btn-success pull-right" style="margin:5px;" [disabled]="!f.valid" type="submit" >SignUp</button>
+    </form>
+  </div>
+</div>
+

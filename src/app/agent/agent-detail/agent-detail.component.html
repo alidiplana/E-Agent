@@ -1,0 +1,165 @@
+
+<!--<div class="row">-->
+<!--  <div class="col-xs-12">-->
+
+<!--    <div class="row">-->
+<!--      <button class="btn btn-primary pull-right"-->
+<!--              [routerLink]="['/agents', agent.id, 'edit-agent']">Edit Details</button>-->
+<!--        <div class="col-sm-6 form-group">-->
+<!--          <h2>{{agent.name}}</h2>-->
+<!--        </div>-->
+
+<!--        <div class="col-sm-6 form-group pull-right">-->
+<!--          <img-->
+<!--            [src]="agent.image"-->
+<!--            [name]="agent.name"-->
+<!--            style="max-height: 150px;">-->
+<!--        </div>-->
+
+
+<!--      </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<!--<hr>-->
+
+<!--<div class="row">-->
+<!--  <div class="col-xs-12">-->
+<!--    <div class="row">-->
+
+
+<!--      <div class="col-sm-12 form-group pull-left">-->
+<!--        <label >Introduction</label>-->
+<!--        {{agent.introduction}}-->
+<!--      </div>-->
+
+<!--      <div class="col-sm-6 form-group">-->
+<!--        <label>Email</label>-->
+<!--        {{agent.email}}-->
+<!--      </div>-->
+
+
+
+<!--      <div class="col-sm-6 form-group" >-->
+<!--        <label >Address</label>-->
+<!--        {{agent.address}}-->
+<!--      </div>-->
+
+<!--      <div class="col-sm-6 form-group">-->
+<!--        <label >Registration No</label>-->
+<!--        {{agent.registrationNo}}-->
+<!--      </div>-->
+
+<!--      <div class="col-xs-6 form-group"  >-->
+<!--        <label >Agent Status</label>-->
+<!--        {{agent.agentStatus}}-->
+
+<!--      </div>-->
+
+<!--      <div class="col-sm-6 form-group pull-left">-->
+<!--        <label >Cell No</label>-->
+<!--        {{agent.cellNo}}-->
+<!--      </div>-->
+
+
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+
+
+
+<div class="container emp-profile">
+  <form method="post">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="profile-img">
+          <img [src]="agent.image" alt=""/>
+          <div class="file btn btn-lg btn-primary">
+            <input type="file" name="file"/>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="profile-head">
+          <h5>
+            {{agent.name}}
+          </h5>
+          <h6>
+            {{agent.introduction}}
+          </h6>
+          <p class="proile-rating">RANKINGS : <span>8/10</span></p>
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="home-tab" data-toggle="tab" aria-controls="home" aria-selected="true">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-2" >
+          <input *ngIf="editTrue" type="submit" class="profile-edit-btn" name="btnAddMore" [routerLink]="['/agents', agent.id, 'edit-agent']" value="Edit Profile"/>
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-md-8 pull-right">
+        <div class="row">
+          <div class="col-md-6">
+            <label>User Id</label>
+          </div>
+          <div class="col-md-6">
+            <p>{{agent.id}}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label>Name</label>
+          </div>
+          <div class="col-md-6">
+            <p>{{agent.name}}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label>Email</label>
+          </div>
+          <div class="col-md-6">
+            <p>{{agent.email}}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label>Phone</label>
+          </div>
+          <div class="col-md-6">
+            <p>{{agent.cellNo}}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label>Status</label>
+          </div>
+          <div class="col-md-6">
+            <p>{{agent.agentStatus}}</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </form>
+
+</div>
+<div *ngIf="editTrue" class="row">
+  <button class="btn btn-default pull-right" [routerLink]="['/agents', id, 'add-package']">Add Package</button>
+</div>
+<br>
+<div class="row" >
+  <div align="left">
+    <app-package-item
+      *ngFor="let packag of agent.packages"
+      [package]="packag"
+      [agent]="agent"
+      [agentView]=true></app-package-item>
+  </div>
+</div>

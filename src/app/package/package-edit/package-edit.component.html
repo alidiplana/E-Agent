@@ -1,0 +1,118 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Edit Package</h2>
+      <div class="row">
+        <div class="col-xs-12">
+          <form [formGroup]="packageForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+              <div class="col-sm-6 form-group">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  formControlName="name"
+                  class="form-control"
+                >
+              </div>
+
+              <div class="col-sm-6 form-group">
+                <label for="name">Package Type</label>
+                <input
+                  type="text"
+                  id="packageType"
+                  formControlName="packageType"
+
+                  class="form-control"
+                >
+              </div>
+
+              <div class="col-sm-6 form-group">
+                <label for="image">Image</label>
+                <input
+                  type="text"
+                  id="image"
+                  formControlName="image"
+                  class="form-control"
+                >
+              </div>
+
+              <div class="col-sm-6 form-group" >
+                <label for="name">Description</label>
+                <input
+                  type="text"
+                  id="descrption"
+                  formControlName="descrption"
+                  class="form-control"
+                >
+              </div>
+
+              <div class="col-sm-6 form-group">
+                <label for="name">Package Status</label>
+                <input
+                  type="text"
+                  id="packageStatus"
+                  formControlName="packageStatus"
+                  class="form-control"
+                >
+              </div>
+
+              <div class="col-sm-6 form-group">
+                <label for="name">Price</label>
+                <input
+                  type="text"
+                  id="price"
+                  formControlName="price"
+                  class="form-control"
+                >
+              </div>
+
+              <div class="col-sm-6 form-group">
+                <label for="name">Days</label>
+                <input
+                  type="number"
+                  id="days"
+                  formControlName="days"
+                  class="form-control"
+                >
+              </div>
+
+              <div class="col-sm-6 form-group">
+                <label for="name">Valid Date</label>
+                <input
+                  type="text"
+                  id="validDate"
+                  formControlName="validDate"
+                  class="form-control"
+                >
+              </div>
+
+              <div class="col-sm-6 form-group">
+                <label for="name">Start Date</label>
+                <input
+                  type="text"
+                  id="startDate"
+                  formControlName="startDate"
+                  class="form-control"
+                >
+              </div>
+
+              <div class="col-sm-6 form-group">
+                <label for="name">End Date</label>
+                <input
+                  type="text"
+                  id="endDate"
+                  formControlName="endDate"
+                  class="form-control"
+                >
+              </div>
+            </div>
+            <button class="btn btn-success pull-right" style="margin:5px;" type="submit" [disabled]="!packageForm.valid">Update</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

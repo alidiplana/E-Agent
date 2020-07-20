@@ -1,0 +1,41 @@
+<div class="row">
+  <button *ngIf="!allowEdit" [routerLink]="['/','add-agent']" class="btn btn-success pull-right">Sign Up As Agent</button>
+</div>
+
+<div class="row">
+
+  <div class="col-sm-5 form-group">
+    <label for="name">Name</label>
+    <input
+      placeholder="Search Agent"
+      type="text"
+      id="name"
+      name="name"
+      [(ngModel)]="name"
+
+
+      class="form-control"
+    >
+  </div>
+</div>
+
+
+<br>
+<p *ngIf="!agents">No Agent Available</p>
+<div class="row" *ngIf="agents">
+  <div class="col-xs-12">
+
+      <app-agent-item
+        *ngFor="let i of agents | filterAgent: name"
+        [agent]="i"
+        [index]="i.id"></app-agent-item>
+
+<!--    <app-agent-add-->
+<!--      *ngIf="onAgentListSelected === 'agentadd'"-->
+<!--      (agentAdded)="onAgentAdded($event)"></app-agent-add>-->
+<br>
+
+
+  </div>
+</div>
+

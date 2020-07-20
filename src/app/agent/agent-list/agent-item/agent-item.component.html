@@ -1,0 +1,55 @@
+<!--<a-->
+<!--  [routerLink]="['/','agents', index]"-->
+<!--  style="cursor: pointer"-->
+<!--  class="list-group-item clearfix">-->
+<!--  <div class="pull-left">-->
+<!--    <h4 class="list-group-item-heading"><b>{{agent.name}}</b></h4>-->
+<!--    <h5 class="list-group-item-text">{{agent.introduction}}</h5>-->
+<!--    <p class="list-group-item-text"><small>{{agent.address}}</small></p>-->
+<!--  </div>-->
+<!--  <span class="pull-right">-->
+<!--        <img-->
+<!--          [src]="agent.image"-->
+<!--          alt="{{agent.name}}"-->
+<!--          class="img-responsive"-->
+<!--          style="max-height: 50px;">-->
+<!--  </span>-->
+<!--</a>-->
+<!------ Include the above in your HEAD tag ---------->
+
+
+<!--  <div class="container">-->
+
+<!--      &lt;!&ndash;Profile Card 5&ndash;&gt;-->
+<!--      <a [routerLink]="['/','agents', index]"-->
+<!--      >-->
+<!--        <div class="col-md-4 mt-4">-->
+<!--          <div class="card profile-card-5">-->
+<!--            <div class="card-img-block">-->
+<!--              <img align="center" class="card-img-top" [src]="agent.image" alt="{{agent.name}}" style="max-height: 150px;">-->
+<!--            </div>-->
+<!--            <div class="card-body pt-0">-->
+<!--              <h5 class="card-title">{{agent.name}}</h5>-->
+<!--              <p class="card-text">{{agent.introduction}}</p>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <p class="mt-3 w-100 float-left text-center"><strong>Card with Floting Picture</strong></p>-->
+<!--        </div>-->
+
+<!--      </a>-->
+
+<!--  </div>-->
+
+<div class="col-lg-4 col-md-4 col-sm-6">
+  <a [routerLink]="['/','agents', index]" class="fh5co-card-item image-popup">
+    <figure>
+      <div class="overlay"><i class="ti-plus"></i></div>
+      <img src="{{agent.image}}" alt="Image" class="img-responsive">
+    </figure>
+    <div class="fh5co-text">
+      <h2>{{agent.name}}</h2>
+      <p>{{agent.introduction}}</p>
+      <p><span class="btn btn-primary">View Profile</span></p>
+    </div>
+  </a>
+</div>

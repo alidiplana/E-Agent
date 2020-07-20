@@ -1,0 +1,30 @@
+
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<h3>
+  {{title}}
+</h3>
+<br>
+<div class="row">
+  <a *ngFor="let item of starList; let i=index " (click)="setStar(i)">
+    <i class="fa" [ngClass]="{'fa-star-o':item,'fa-star':!item}"></i>
+  </a>
+  <br>
+  Rating :- {{rating}} stars
+
+
+
+
+</div>
+
+<div class="row">
+  <textarea class="form-group" rows="4" cols="130" type="text" [(ngModel)]="wording"></textarea>
+</div>
+
+
+<div class="row col-sm-12">
+  <button class="btn btn-success pull-right" (click)="onAddRating()">Give Rating</button>
+</div>
+

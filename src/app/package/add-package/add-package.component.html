@@ -1,0 +1,127 @@
+<h2>Add Package</h2>
+<div class="row">
+  <div class="col-xs-12">
+    <form (ngSubmit)="onAddItem(f)" #f="ngForm">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            ngModel
+            required
+            class="form-control"
+          >
+        </div>
+
+        <div class="col-sm-6 form-group">
+          <label for="name">Package Type</label>
+          <input
+            type="text"
+            id="packageType"
+            name="packageType"
+            ngModel
+            required
+            class="form-control"
+          >
+        </div>
+
+        <div class="col-sm-6 form-group">
+          <label for="image">Image</label>
+          <input
+            type="text"
+            id="image"
+            name="image"
+            ngModel
+            class="form-control"
+          >
+        </div>
+
+        <div class="col-sm-6 form-group" >
+          <label for="name">Description</label>
+          <input
+            type="text"
+            id="description"
+            name="description"
+            ngModel
+            class="form-control"
+          >
+        </div>
+
+        <div class="col-sm-6 form-group">
+          <label for="name">Package Status</label>
+          <input
+            type="text"
+            id="packageStatus"
+            name="packageStatus"
+            ngModel
+            class="form-control"
+          >
+        </div>
+
+        <div class="col-sm-6 form-group">
+          <label for="name">Price</label>
+          <input
+            type="number"
+            id="price"
+            name="price"
+            ngModel
+            class="form-control"
+          >
+        </div>
+
+        <div class="col-sm-6 form-group">
+          <label for="name">Days</label>
+          <input
+            type="number"
+            id="days"
+            name="days"
+            ngModel
+            class="form-control"
+          >
+        </div>
+
+        <div class="col-sm-6 form-group">
+          <label for="name">Valid Date</label>
+          <input
+            type="text"
+            id="validDate"
+            name="validDate"
+            ngModel
+            class="form-control"
+          >
+        </div>
+
+        <div class="col-sm-6 form-group">
+          <label for="name">Start Date</label>
+          <input
+            type="text"
+            id="startDate"
+            name="startDate"
+            ngModel
+            class="form-control"
+          >
+        </div>
+
+        <div class="col-sm-6 form-group">
+          <label for="name">End Date</label>
+          <input
+            type="text"
+            id="ednDate"
+            name="ednDate"
+            ngModel
+            class="form-control"
+          >
+        </div>
+
+
+
+
+
+      </div>
+      <button class="btn btn-success pull-right" style="margin:5px;" [disabled]="!f.valid" type="submit" >SignUp</button>
+    </form>
+  </div>
+</div>
+

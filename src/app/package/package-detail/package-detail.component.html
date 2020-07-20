@@ -1,0 +1,61 @@
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <button class="btn btn-default" [routerLink]="['/packages', pkg.id, 'edit']">Edit Package</button>
+      <button class="btn btn-success pull-right" (click)="packageSelected()">{{selct}}</button>
+      <div class="row">
+        <div class="col-xs-6 pull-left">
+          <h1>{{pkg.name}}</h1>
+        </div>
+        <div class="pull-right">
+          <img
+            [src]="pkg.image"
+            alt="{{pkg.name}}"
+            class="img-responsive"
+            style="max-height: 150px;">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <label class="form">Description</label>
+          <p>{{pkg.description}}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <label class="form">Price</label>
+          <p>{{pkg.price}}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <label class="form" *ngIf="pkg.packageType === 'hajj'; else infotext">Departure for Hajj</label>
+          <ng-template #infotext>
+            <label>Departure for Umrah</label>
+          </ng-template>
+          <p>{{pkg.startDate}}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <label class="form">Return Date</label>
+          <p>{{pkg.endDate}}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <label class="form">Price</label>
+          <p>{{pkg.price}}</p>
+        </div>
+      </div>
+      <br>
+      <app-rating
+        [packageId]="pkg.id"></app-rating>
+      <br>
+      <br>
+      <app-rating-list></app-rating-list>
+    </div>
+  </div>
+</div>
