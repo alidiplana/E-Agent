@@ -1,6 +1,6 @@
 # EAgent
 
-This is Angular project of finding Agents for travling to haj and Umrah. I can generalized any project for all the travelers. 
+This is Angular project of finding Agents for travling to haj and Umrah. I can generalized this project for all the travelers and agents. 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.2.
 
